@@ -1,0 +1,68 @@
+<html><meta charset='UTF-8'/><meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/><meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet"><script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script><script src="https://kit.fontawesome.com/4f3ce16e3e.js" crossorigin="anonymous"></script><link href="https://forkamu.feeldream.repl.co/style.css" rel="stylesheet" type="text/css" /><script src="https://forkamu.feeldream.repl.co/script.js"></script>
+<head>
+<title>Script HTML Bucin</title>
+</head>
+<style>
+:root {
+--warna-bg: rgba(0, 0, 0, .15); 
+--warna-teks: white;
+--bingkai: 5px;
+--gaya-font: 'Ubuntu', sans-serif;
+}
+</style>
+<body><div id="bodyblur"><img id="wallpaper" src="" width="100%" height="100%"/></div>
+
+<div id='Content'><p id="idgeser"></p>
+
+<div><blockquote id='bq'><img id="foto1" src=""/><img id="foto2" src=""/><img id="foto3" src=""/><p id="katakata"></p><p id="katajawab"></p><p id="katabawah"></p><p id="akhiran" onClick="menuju();">[ Jawab ]</p></blockquote></div>
+
+<div id="contTom" style="display:none;"><a id="By" class='button' onClick="lanjut()"></i>Lanjut</a></div>
+</div>
+
+<script>const body = document.querySelector("body");function createHeart() {const heart = document.createElement("div"); heart.className = "fas fa-heart"; heart.style.left = (Math.random() * 90)+"vw"; heart.style.animationDuration = (Math.random()*3)+2+"s"; body.appendChild(heart);} setInterval(function name(params) {var heartArr = document.querySelectorAll(".fa-heart"); if (heartArr.length > 100) {heartArr[0].remove()}},100);</script>
+<script>
+  fungsi=1;
+  async function lanjut(){
+    	  if(fungsi==1){akhiran.innerHTML="[ Jawab ]";foto1.style="display:none";foto2.style="display:inline-flex";katakata.innerHTML = kata2;otomatis();contTom.style="display:none";setTimeout(fakhiran,800);fungsi=2}
+  else if(fungsi==2){akhiran.innerHTML="[ Kirim Jawaban ]";foto2.style="display:none";foto3.style="display:inline-flex";katakata.innerHTML = katakhir;document.getElementById("katabawah").innerHTML = katakhirb;akhiran.style="display:none";setTimeout(fakhiran,1000);fungsi=3;}
+  }
+  async function sudah(){katajawab.innerHTML = jawaban;pesanwhatsapp = jawaban;katajawab.style="display:inline-flex";}
+  async function menuju(){
+           if(fungsi==2){kuis();}
+   else if(fungsi==3){await swals.fire('Kirim jawaban ke WhatsApp aku, ya!');window.location = "https://api.whatsapp.com/send?phone=&text=" + pesanwhatsapp;setTimeout(maubucin,3500);}
+   }
+</script>
+
+<script type="text/javascript">
+            async function kuis(){
+                var { value: jawaban } = await swals.fire({
+                    title: 'Masukkan Jawaban', input: 'text', allowOutsideClick: false, showCancelButton: false,
+                });
+                if(jawaban && jawaban.length < 16){
+                	window.jawaban = jawaban;sudah();lanjut();
+                } else {
+                    await swals.fire('Ups!', 'Jawaban tidak boleh kosong atau lebih dari 15 karakter, ya!');
+                }
+            }
+
+      async function apapun() {
+         linklagu = 'https://forkamu.feeldream.repl.co/lagu.mp3';
+         wallpaper.src = "https://i.postimg.cc/wMSSWX1B/IMG-20220211-161601-480.jpg";
+
+         gambar1 = "https://i.ibb.co/JHNjJyp/tkthao219-bubududu-1.gif";
+         kata1 = "Banyak Yang Selalu Ada...";
+
+         gambar2 = "https://i.ibb.co/pdpv2J3/mimibubu-1.gif";
+         kata2 = "Tapi Kalo Aku Mau Kamu Gimana? &#129325;&#10084;";
+
+         gambar3 = "https://i.ibb.co/ZX3Z4vJ/heart-happy.gif";
+         katakhir = "Jawabanmu:";
+         katakhirb = "Makasih udah jawab!";
+
+         await swals.fire('Sekarang lihat ini ya~');play();
+         showDiv();loadfoto();
+      } apapun();
+</script>
+</body>
+</html>
